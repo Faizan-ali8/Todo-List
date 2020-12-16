@@ -1,9 +1,13 @@
-// Check Off Specific Todos By Clicking
+// Start -Check Off Specific Todos By Clicking
+
 $("ul").on("click", "li", function(){
 $(this).toggleClass("completed");
 });
 
-//Click on X to Delete Todo
+// End -Check Off Specific Todos By Clicking
+
+// Start - Click on X to Delete Todo
+
 $("ul").on("click", "span", function(event){
     $(this).parent().fadeOut(500,function(){
         $(this).remove();
@@ -11,7 +15,10 @@ $("ul").on("click", "span", function(event){
     event.stopPropagation();
 });
 
-//Adding a New Todo
+// End - Click on X to Delete Todo
+
+// Start - Adding a New Todo
+
 $("input[type='text']").keypress(function(event){
     if(event.which === 13){
         // grabbing new todo text from input
@@ -25,3 +32,5 @@ $("input[type='text']").keypress(function(event){
 $(".fa-plus").click(function(){
     $("input[type='text']").fadeToggle();
 });
+
+// End - Adding a New Todo
